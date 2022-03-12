@@ -23,6 +23,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: "Greta Sans Condensed Bold","Greta Sans Bold",Arial,sans-serif;
+  background-color: salmon;
 }
 
 #app{

@@ -14,6 +14,13 @@
                     </li>
                 </ul>
             </div>
+
+
+
+            <font-awesome-icon icon="fa-bars" />
+
+            
+
         </section>
     </header>    
 </template>
