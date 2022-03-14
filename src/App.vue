@@ -17,20 +17,16 @@ export default {
 
 <style lang="scss">
 @import './assets/scss/mixins.scss';
+@import './assets/scss/variables.scss';
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Greta Sans Condensed Bold","Greta Sans Bold",Arial,sans-serif;
+  font-family: "Greta Sans Condensed Bold","Greta Sans Bold",Arial,sans-serif; 
 }
 
-#app{
-  background-color: salmon;
-  height: 100vh;
-}
-
-li{
+ol, ul{
   list-style: none;
 }
 
@@ -49,6 +45,14 @@ img{
 
 .d-none{
   display: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $blue;
 }
 
 </style>

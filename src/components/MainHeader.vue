@@ -1,48 +1,53 @@
 <template>
     <header>
-        <section class="container menu-wrapper">
-            <!-- logo -->
-            <figure class="menu-logo">
-                <img src="../assets/img/dc-logo.png" alt="logo">
-            </figure>
+        <section class="container ">
 
-            <!-- menu -->
-            <div class="menu-link">
-                <ul>
-                    <li v-for="(item, index) in menu" :key="index" 
-                    :class="[item.activeMenu || index == activeIndex ? 'active' : '' ]"
-                    @mouseenter="item.activeMenu = true"
-                    @mouseleave="item.activeMenu = false">
+            <div class="menu-wrapper">
+                <!-- logo -->
+                <figure class="menu-logo">
+                    <img src="../assets/img/dc-logo.png" alt="logo">
+                </figure>
 
-                        <a :href="item.link">{{item.text}}</a>
-                    </li>
-                </ul>
+                <!-- menu -->
+                <div class="menu-link">
+                    <ul>
+                        <li v-for="(item, index) in menu" :key="index" 
+                        :class="['nav-item',index == activeIndex ? 'active' : '' ]">
 
-                <a href="#" class="hamburger-icon">
-                    <!-- burger -->
-                    <font-awesome-icon 
-                    @click="hamburgerMenu = true"
-                    :class="hamburgerMenu ? 'd-none' : ''"
-                    icon="fa-bars" />
+                            <a :href="item.link">{{item.text}}</a>
+                        </li>
+                    </ul> 
+                </div>  
 
-                    <!-- close -->
-                    <font-awesome-icon
-                    @click="hamburgerMenu = false"
-                    :class="hamburgerMenu ? '' : 'd-none'"
-                    icon="fa-times" />
-                </a>  
-            </div>
+                <!-- menu icon -->
+                <div class="menu-icon">
+                    <a href="#">
+                        <!-- burger -->
+                        <font-awesome-icon 
+                        @click="hamburgerMenu = true"
+                        :class="hamburgerMenu ? 'd-none' : ''"
+                        icon="fa-bars" />
+
+                        <!-- close -->
+                        <font-awesome-icon
+                        @click="hamburgerMenu = false"
+                        :class="hamburgerMenu ? '' : 'd-none'"
+                        icon="fa-times" />
+                    </a> 
+                </div>  
+            </div>                    
 
             <!-- hamburger menu -->
             <div class="hamburger-menu" :class="hamburgerMenu ? 'active' : 'd-none' ">
                 <ul>
                     <li v-for="(item, index) in menu" :key="index" 
-                    :class="[item.activeMenu || index == activeIndex ? 'active' : '']">
+                    :class="['nav-item',index == activeIndex ? 'active' : '' ]">
 
                         <a :href="item.link">{{item.text}}</a>
                     </li>
-                </ul>              
+                </ul>
             </div>
+
         </section>
     </header>    
 </template>
@@ -57,53 +62,43 @@
                 menu: [
                     {
                         text: 'Characters',
-                        link: '#',
-                        activeMenu: false
+                        link: '#'
                     },
                     {
                         text: 'Comics',
-                        link: '#',
-                        activeMenu: true
+                        link: '#'
                     },
                     {
                         text: 'Movies',
-                        link: '#',
-                        activeMenu: false
+                        link: '#'
                     },
                     {
                         text: 'TV',
-                        link: '#',
-                        activeMenu: false
+                        link: '#'
                     },
                     {
                         text: 'Games',
-                        link: '#',
-                        activeMenu: false
+                        link: '#'
                     },
                     {
                         text: 'Collectibles',
-                        link: '#',
-                        activeMenu: false
+                        link: '#'
                     },
                     {
                         text: 'Videos',
-                        link: '#',
-                        activeMenu: false
+                        link: '#'
                     },
                     {
                         text: 'Fans',
-                        link: '#',
-                        activeMenu: false
+                        link: '#'
                     },
                     {
                         text: 'News',
-                        link: '#',
-                        activeMenu: false
+                        link: '#'
                     },
                     {
                         text: 'Shop',
-                        link: '#',
-                        activeMenu: false
+                        link: '#'
                     }
                 ]
             }
@@ -116,80 +111,90 @@
 @import '../assets/scss/mixins.scss';
 
 header{
-    padding: 0 10px;
     user-select: none;
 
-    background-color: white;
-
     .menu-wrapper{
+        padding: 0 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 120px;
+        z-index: 999;
 
         .menu-logo{
-            width: 80px;
-            min-width: 80px;
+            max-width: 80px;
+            cursor: pointer;
         }
 
         .menu-link{
             display: flex;
+            height: 100%;
             gap: 34px;
-
-            .hamburger-icon{
-                display: none;
-            }
             
             ul{
                 display: contents;
-                
-                li{
-                    @include liHeader;
-                    position: relative;
-                    height: 100%;
-                    line-height: 120px;
-                    font-size: 12PX;
-                }
 
-                .active{
-                    color: $blue;
+                .nav-item{
+                    @include itemHeader;
+                    font-size: 12px;
 
-                    &::after{
-                        content: '';
-                        display: inline-block;
-                        background-color: $blue;
-                        height: 5px;
-                        width: 100%;
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
-                        animation: after_enter 300ms linear;
+                    a{
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                    }
+
+                    &.active, :hover{
+                        color: $blue;
+                        transition: all 300ms linear;
+                    }
+
+                    &.active, &:hover{
+
+                        a::after{
+                            content: '';
+                            display: block;
+                            background-color: $blue;
+                            height: 5px;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            animation: after_enter 300ms linear;
+                        }
                     }
                 }
             }
         }
 
-        .hamburger-menu{
+        .menu-icon{
             display: none;
-            position: absolute;
-            bottom: 0;
-            left: 0;                
-            padding: 20px;
-            min-width: 100vw;
-            min-height: calc(100vh - 50px);
-            background: #242526;
-            color: white;
-            font-size: 20px;
+            font-size: 25px;
+            z-index: 999;
+        }
+    }
 
-            ul{
-                li{
-                    @include liHeader;
-                    padding: 15px 0;                
-                }
+    .hamburger-menu{
+        display: none;
+        position: relative;
+        padding: 20px;
+        min-width: 100vw;
+        min-height: calc(100vh - 50px);
+        background: #242526;
+        color: white;
+        font-size: 20px;               
 
-                .active{
+        ul{
+            .nav-item{
+                @include itemHeader;
+                font-size: 18px;
+                padding: 15px 0;
+                    
+                &.active, :hover{
                     color: $blue;
                     text-decoration: underline;
+                    transition: all 300ms linear;
                 }
             }
         }
@@ -204,7 +209,7 @@ header{
         }        
     }
 
-    @media screen and (max-width: 940px) {
+    @media screen and (max-width: 900px) {
         .menu-wrapper{
             height: 50px;
 
@@ -214,19 +219,17 @@ header{
             }
 
             .menu-link{
-                .hamburger-icon{
-                    display: inline-block;
-                    font-size: 25px;
-                }
-                ul{
-                    display: none;  
-                }                          
+                display: none;
             }
 
-            .hamburger-menu.active{
-                display: block;
-            }      
+            .menu-icon{
+                display: inline-block;
+            }              
         }
+
+        .hamburger-menu.active{
+            display: block;
+        }    
     }
 }
 
