@@ -1,11 +1,41 @@
+@import './variables';
 
 @mixin container{
     max-width: 1280px;
     margin: 0 auto;
 }
 
-@mixin itemHeader{
+@mixin itemFont{
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: -0.05em;
+    white-space: nowrap;
+}
+
+@mixin widget{
+    padding-top: 25px;
+
+    .widget__title{
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 10px;
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+    .widget__menu{
+        li{
+            padding: 3px 0;
+            font-size: 12px;
+        }
+    }
+}
+
+@mixin btn{
+    border: 2px solid $blue;
+    height: 50px;
+    width: 150px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
 }

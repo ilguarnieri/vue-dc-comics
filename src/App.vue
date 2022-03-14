@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <MainHeader />
+    <MainFooter />
   </div>
 </template>
 
 <script>
 import MainHeader from "./components/MainHeader.vue"
+import MainFooter from "./components/MainFooter.vue"
 
 export default {
   name: 'App',
   components: {
-    MainHeader
+    MainHeader,
+    MainFooter
   }
 }
 </script>

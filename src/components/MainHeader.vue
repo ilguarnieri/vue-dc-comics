@@ -12,7 +12,7 @@
                 <div class="menu-link">
                     <ul>
                         <li v-for="(item, index) in menu" :key="index" 
-                        :class="['nav-item',index == activeIndex ? 'active' : '' ]">
+                        :class="['nav-item', index == activeIndex ? 'active' : '' ]">
 
                             <a :href="item.link">{{item.text}}</a>
                         </li>
@@ -41,7 +41,7 @@
             <div class="hamburger-menu" :class="hamburgerMenu ? 'active' : 'd-none' ">
                 <ul>
                     <li v-for="(item, index) in menu" :key="index" 
-                    :class="['nav-item',index == activeIndex ? 'active' : '' ]">
+                    :class="['nav-item', index == activeIndex ? 'active' : '' ]">
 
                         <a :href="item.link">{{item.text}}</a>
                     </li>
@@ -135,7 +135,7 @@ header{
                 display: contents;
 
                 .nav-item{
-                    @include itemHeader;
+                    @include itemFont;
                     font-size: 12px;
 
                     a{
@@ -187,7 +187,7 @@ header{
 
         ul{
             .nav-item{
-                @include itemHeader;
+                @include itemFont;
                 font-size: 18px;
                 padding: 15px 0;
                     
