@@ -206,6 +206,12 @@
             </div>
         </section>
 
+        <section class="footer__rights">
+            <p>
+                All Site Content TM and © 2020 DC Entertainment, unless otherwise <span class="link__text">noted here</span>. All rights reserved. <span class="link__text">Cookies Settings</span>
+            </p>
+        </section>
+
     </footer>    
 </template>
 
@@ -232,6 +238,7 @@ footer{
     background-size: cover;    
     background-repeat: no-repeat;
     color: white;
+    user-select: none;
 
     .footer__body{
         height: calc(100% - 110px);
@@ -276,6 +283,10 @@ footer{
             .btn-sign{
                 @include btn;
                 @include itemFont;
+
+                &:hover{
+                    background-color: $blue;
+                }
             }
 
             .link__social{
@@ -292,6 +303,85 @@ footer{
                     display: contents;
                 }
             }
+        }
+    }
+
+    .footer__rights{
+        display: none;
+        color: $grayFooter;
+        height: 60px;
+        background-color: #212121;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 700;
+
+        .link__text{
+            color: $blue;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .footer__body{
+            .container{
+                background-image: url();
+            }
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+
+        height: 190px;
+        background-image: url();
+        background-color: #1C1C1C;;
+
+        .footer__body{
+            display: none;
+        }
+
+        .footer__social{
+            height: 100%;
+            background-color: transparent;
+
+            .container{
+                background-image: url('../assets/img/dc-logo-bg.png');
+                background-repeat: no-repeat;
+                background-position: right center;
+                background-size: 80%;
+                padding: 20px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+
+                .btn-sign{
+                    @include btn;
+                    @include itemFont;
+                    background-color: $blue;
+                }
+
+                .link__social{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+
+                    .link__title{
+                        @include itemFont;
+                        color: $blue;
+                    }
+
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                    }
+                }
+            }
+        }
+
+        .footer__rights{
+            display: flex;
         }
     }
 }
