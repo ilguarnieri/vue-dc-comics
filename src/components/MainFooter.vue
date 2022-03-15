@@ -182,22 +182,22 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="../assets/img/footer-twitter.png" alt="facebook">
+                                <img src="../assets/img/footer-twitter.png" alt="twitter">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="../assets/img/footer-youtube.png" alt="facebook">
+                                <img src="../assets/img/footer-youtube.png" alt="fyoutube">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="../assets/img/footer-pinterest.png" alt="facebook">
+                                <img src="../assets/img/footer-pinterest.png" alt="pinterest">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="../assets/img/footer-periscope.png" alt="facebook">
+                                <img src="../assets/img/footer-periscope.png" alt="periscope">
                             </a>
                         </li>
                     </ul>
@@ -208,7 +208,18 @@
 
         <section class="footer__rights">
             <p>
-                All Site Content TM and © 2020 DC Entertainment, unless otherwise <span class="link__text">noted here</span>. All rights reserved. <span class="link__text">Cookies Settings</span>
+                All Site Content TM and © 2020 DC Entertainment, unless otherwise
+                <span class="link__text">
+                    <a href="#">
+                        noted here
+                    </a>
+                    </span>.
+                All rights reserved.
+                <span class="link__text">
+                    <a href="#">
+                        Cookies Settings
+                    </a>                    
+                </span>
             </p>
         </section>
 
@@ -246,7 +257,6 @@ footer{
         .container{
             display: flex;
             padding: 10px;
-            height: 100%;
             background-image: url('../assets/img/dc-logo-bg.png');
             background-repeat: no-repeat;
             background-position: right center;
@@ -274,7 +284,6 @@ footer{
         background-color: #303030;
 
         .container{
-            height: 100%;
             padding: 0 10px;
             display: flex;
             justify-content: space-between;
@@ -282,7 +291,7 @@ footer{
 
             .btn-sign{
                 @include btn;
-                @include itemFont;
+                @include styleFont;
 
                 &:hover{
                     background-color: $blue;
@@ -295,7 +304,7 @@ footer{
                 gap: 20px;
 
                 .link__title{
-                    @include itemFont;
+                    @include styleFont;
                     color: $blue;
                 }
 
@@ -357,7 +366,7 @@ footer{
 
                 .btn-sign{
                     @include btn;
-                    @include itemFont;
+                    @include styleFont;
                     background-color: $blue;
                 }
 
@@ -367,7 +376,7 @@ footer{
                     gap: 20px;
 
                     .link__title{
-                        @include itemFont;
+                        @include styleFont;
                         color: $blue;
                     }
 

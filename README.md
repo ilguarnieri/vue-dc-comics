@@ -1,4 +1,4 @@
-<h1 align="center" title="Unicode Formatter">𝙫𝙪𝙚-𝙙𝙘-𝙘𝙤𝙢𝙞𝙘𝙨</h1>
+<h1 align="center" title="Unicode Formatter">🦸‍♂️ 𝙫𝙪𝙚-𝙙𝙘-𝙘𝙤𝙢𝙞𝙘𝙨</h1>
 
 <p align="center">
 Cʀᴇᴀᴛᴇ ᴄᴏᴍɪᴄꜱ ᴩᴀɢᴇ ᴡɪᴛʜ Vᴜᴇ CLI

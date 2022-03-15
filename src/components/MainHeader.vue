@@ -135,7 +135,7 @@ header{
                 display: contents;
 
                 .nav-item{
-                    @include itemFont;
+                    @include styleFont;
                     font-size: 12px;
 
                     a{
@@ -187,7 +187,7 @@ header{
 
         ul{
             .nav-item{
-                @include itemFont;
+                @include styleFont;
                 font-size: 18px;
                 padding: 15px 0;
                     
