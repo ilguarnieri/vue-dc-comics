@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <MainHeader />
+    <DcMain />
     <MainCategories />
     <MainFooter />
   </div>
@@ -10,13 +11,15 @@
 import MainHeader from "./components/MainHeader.vue"
 import MainCategories from "./components/MainCategories.vue"
 import MainFooter from "./components/MainFooter.vue"
+import DcMain from "./components/DcMain.vue"
 
 export default {
   name: 'App',
   components: {
     MainHeader,
     MainFooter,
-    MainCategories
+    MainCategories,
+    DcMain
   }
 }
 </script>

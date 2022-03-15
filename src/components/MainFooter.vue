@@ -281,7 +281,7 @@ footer{
 
     .footer__social{
         height: 110px;
-        background-color: #303030;
+        background-color: $black3;
 
         .container{
             padding: 0 10px;
@@ -291,7 +291,6 @@ footer{
 
             .btn-sign{
                 @include btn;
-                @include styleFont;
 
                 &:hover{
                     background-color: $blue;
@@ -319,7 +318,7 @@ footer{
         display: none;
         color: $grayFooter;
         height: 60px;
-        background-color: #212121;
+        background-color: $black2;
         align-items: center;
         padding: 10px;
         text-align: center;
@@ -343,7 +342,7 @@ footer{
 
         height: 190px;
         background-image: url();
-        background-color: #1C1C1C;;
+        background-color: $black1;
 
         .footer__body{
             display: none;
@@ -366,7 +365,6 @@ footer{
 
                 .btn-sign{
                     @include btn;
-                    @include styleFont;
                     background-color: $blue;
                 }
 

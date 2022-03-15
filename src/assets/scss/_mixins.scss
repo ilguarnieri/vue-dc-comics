@@ -33,11 +33,20 @@
 }
 
 @mixin btn{
+    @include styleFont;
     border: 2px solid $blue;
-    height: 50px;
-    width: 150px;
+    height: 55px;
+    padding: 0 20px;
     color: white;
     background-color: transparent;
     cursor: pointer;
     transition: all 300ms ease-in-out;
 }
+
+@mixin btnBlue{
+    @include btn;
+    background-color: $blue;
+    height: 40px;
+    width: 185px;
+}
+

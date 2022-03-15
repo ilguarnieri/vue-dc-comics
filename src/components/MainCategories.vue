@@ -88,7 +88,12 @@
                     max-width: 50px;
                     height: 55px;
                 }
-            }            
+            }
+
+            &:hover{
+                transform: scale(1.1);
+                transition: all 300ms ease-in-out;
+            }          
         }
     }
 

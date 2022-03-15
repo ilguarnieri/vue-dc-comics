@@ -179,11 +179,11 @@ header{
         display: none;
         position: relative;
         padding: 20px;
-        min-width: 100vw;
+        min-width: calc(100vw - 8px);
         min-height: calc(100vh - 50px);
-        background: #242526;
+        background: $blackMenu;
         color: white;
-        font-size: 20px;               
+        font-size: 20px;
 
         ul{
             .nav-item{
