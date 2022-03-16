@@ -208,18 +208,19 @@
 
         <section class="footer__rights">
             <p>
-                All Site Content TM and © 2020 DC Entertainment, unless otherwise
+                WebApp sviluppata a puro scopo educativo da
                 <span class="link__text">
-                    <a href="#">
-                        noted here
+                    <a href="https://www.flowcode.com/page/ilguarnieri" targer="_blank">
+                        Angelo Guarnieri
                     </a>
-                    </span>.
-                All rights reserved.
+                    </span>
+                    ispirato a
                 <span class="link__text">
-                    <a href="#">
-                        Cookies Settings
+                    <a href="https://www.dccomics.com/" targer="_blank">
+                        DC Comics
                     </a>                    
                 </span>
+                (tutti i diritti sono riservati).
             </p>
         </section>
 
