@@ -1,8 +1,8 @@
 <template>
     <header>
-        <section class="container ">
+        <section class="container" :class="hamburgerMenu ? 'p-fix' : ''">
 
-            <div class="menu-wrapper">
+            <div class="menu-wrapper ">
                 <!-- logo -->
                 <figure class="menu-logo">
                     <img src="../assets/img/dc-logo.png" alt="logo">
@@ -119,7 +119,6 @@ header{
         justify-content: space-between;
         align-items: center;
         height: 120px;
-        z-index: 999;
 
         .menu-logo{
             max-width: 80px;
@@ -170,8 +169,7 @@ header{
 
         .menu-icon{
             display: none;
-            font-size: 25px;
-            z-index: 999;
+            font-size: 25px;           
         }
     }
 
@@ -184,6 +182,7 @@ header{
         background: $blackMenu;
         color: white;
         font-size: 20px;
+        z-index: 999;
 
         ul{
             .nav-item{
@@ -229,7 +228,7 @@ header{
 
         .hamburger-menu.active{
             display: block;
-        }    
+        }
     }
 }
 

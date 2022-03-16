@@ -64,4 +64,12 @@ img{
   background: $blue;
 }
 
+@media screen and (max-width: 900px) {
+  .p-fix{
+    position: fixed;
+    background-color: white;
+    z-index: 999;
+  }
+}
+
 </style>

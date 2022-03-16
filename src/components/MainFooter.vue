@@ -162,6 +162,11 @@
                     </div>
                 </div>
 
+
+                <div class="rights__general">
+                    <RightsAg />
+                </div>
+
             </div>
         </section>
 
@@ -207,29 +212,20 @@
         </section>
 
         <section class="footer__rights">
-            <p>
-                WebApp sviluppata a puro scopo educativo da
-                <span class="link__text">
-                    <a href="https://www.flowcode.com/page/ilguarnieri" targer="_blank">
-                        Angelo Guarnieri
-                    </a>
-                    </span>
-                    ispirato a
-                <span class="link__text">
-                    <a href="https://www.dccomics.com/" targer="_blank">
-                        DC Comics
-                    </a>                    
-                </span>
-                (tutti i diritti sono riservati).
-            </p>
+             <RightsAg />
         </section>
 
     </footer>    
 </template>
 
 <script>
+import RightsAg from './RightsAg.vue'
+
     export default{
         name: 'MainFooter',
+        components:{
+            RightsAg
+        },
         data(){
             return{
 
@@ -277,6 +273,12 @@ footer{
                     }
                 }
             }
+
+            .rights__general{
+                align-self: flex-end;
+                color: $grayFooter;
+                margin: 0 auto;
+            }
         }
     }
 
@@ -323,12 +325,6 @@ footer{
         align-items: center;
         padding: 10px;
         text-align: center;
-        font-size: 11px;
-        font-weight: 700;
-
-        .link__text{
-            color: $blue;
-        }
     }
 
     @media screen and (max-width: 900px) {
