@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/AG Comics/'
+  publicPath: '/vue-dc-comics/'
 }
