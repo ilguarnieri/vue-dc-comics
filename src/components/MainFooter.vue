@@ -67,7 +67,7 @@
                 <!-- second col -->
                 <div class="col">
                     <div class="widget">
-                        <h4 class="widget__title">Dc Comics</h4>
+                        <h4 class="widget__title">DC</h4>
                         <ul class="widget__menu">
                             <li>
                                 <a href="#">
@@ -131,7 +131,7 @@
                 <!-- third col -->
                 <div class="col">
                     <div class="widget">
-                        <h4 class="widget__title">Dc Comics</h4>
+                        <h4 class="widget__title">Sites</h4>
                         <ul class="widget__menu">
                             <li>
                                 <a href="#">
@@ -259,7 +259,7 @@ footer{
             background-position: right center;
 
             .col{
-                width: 150px;
+                min-width: 150px;
 
                 .widget{
                     @include widget;
