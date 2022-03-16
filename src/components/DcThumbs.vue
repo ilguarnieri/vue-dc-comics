@@ -29,6 +29,8 @@
     .dc__thumb{
         max-width: 185px;
         margin-bottom: 20px;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
 
         .thumb-img{
             height: 185px;
@@ -40,6 +42,10 @@
             letter-spacing: -0.05em;
             font-size: 14px;
             color: white;
-        } 
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 </style>
